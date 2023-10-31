@@ -1,0 +1,180 @@
+<!-- JavaCoffee.
+	 Contact page -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta lang="eng">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Contact
+		</title>
+		<link rel="stylesheet" href="styles.css">
+
+		<style>
+
+.contact-us-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+     position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+     min-height: 66vh;
+    min-width: 150vh;
+}
+
+/* Style the contact list */
+.contact-list {
+    list-style: none;
+    padding: 0;
+	margin-top: 75px;
+}
+
+.contact-item {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+/* Style the contact image */
+.contact-image {
+    flex: 1;
+    padding: 10px;
+}
+
+.contact-image img {
+    max-width: 100px;
+    height: 100px;
+	border-radius: 10px;
+}
+
+/* Style the contact text */
+.contact-text {
+    flex: 2;
+    padding: 10px;
+}
+
+.contact-text h2 {
+    font-size: 20px;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.contact-text p {
+    font-size: 16px;
+    color: #666;
+    margin: 0;
+}
+
+		</style>
+	</head>
+
+
+	<body>
+		<nav>
+			<div class="logo"> JavaCoffee</div>
+			<div id="nav-links">
+				<ul id="nav-bar">
+					<li><a href="index.html">Home</a></li>
+					<li><a href="https://ruconnected.ru.ac.za/">RUConnected</a></li>
+					<li><a href="about.html">About</a></li>
+					<li><a href="contact.html">Contact</a></li>
+					<li><a href="forum.html">Forum</a></li>
+					<li><a href="marketplace.html">Market Place</a></li>
+				</ul>
+				<button id="signOut-btn">Signout</button>
+			</div>
+			<div id="dropDownMenu">
+				<button id="dropDownBtn">&#9776;</button>
+				<div id="dropDownContents">
+					<ul id="mobileNav">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="https://ruconnected.ru.ac.za/">RUConnected</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+						<li><a href="forum.html">Forum</a></li>
+						<li><a href="marketplace.html">Market Place</a></li>
+						<li><button id="signOut-btn">Signout</button></li>
+					</ul>
+				</div>
+			</div>
+		
+		</nav>
+		
+		<div class="main">
+			<div class="contact-us-container">
+				<ul class="contact-list" >
+					<li class="contact-item">
+						<div class="contact-image">
+							<img src="\\cs3-dev.ict.ru.ac.za\Practicals$\JavaCoffee\Student-Hub\about_files\member_pics\jaydin.jpg" alt="Person 1">
+						</div>
+						<div class="contact-text">
+							<h2> Jaydin Fischat</h2>
+							<p>Email: JFischat@StuHubbie.com</p>
+							<p>Phone: 0460112121</p>
+						</div>
+					</li>
+					<li class="contact-item">
+						<div class="contact-image">
+							<img src="\\cs3-dev.ict.ru.ac.za\Practicals$\JavaCoffee\Student-Hub\about_files\member_pics\uviwe.jpg" alt="Person 2">
+						</div>
+						<div class="contact-text">
+							<h2>U Jumba</h2>
+							<p>Email: UJumba@StuHubbie.com</p>
+							<p>Phone: +9876543210</p>
+						</div>
+					</li>
+					<li class="contact-item">
+						<div class="contact-image">
+							<img src="\\cs3-dev.ict.ru.ac.za\Practicals$\JavaCoffee\Student-Hub\about_files\member_pics\lesego.jpg" alt="Person 2">
+						</div>
+						<div class="contact-text">
+							<h2>L Pitsi</h2>
+							<p>Email: LPitsi@StuHubbie.com</p>
+							<p>Phone: 0460112124</p>
+						</div>
+					</li>
+					<li class="contact-item">
+						<div class="contact-image">
+							<img src="\\cs3-dev.ict.ru.ac.za\Practicals$\JavaCoffee\Student-Hub\about_files\member_pics\ntsakisi.jpg" alt="Person 2">
+						</div>
+						<div class="contact-text">
+							<h2>N Ritshuri</h2>
+							<p>Email: NRitshuri@StuHubbie.com</p>
+							<p>Phone: +9876543210</p>
+						</div>
+					</li>
+				
+		
+				 
+				</ul>
+			</div>
+		</div>
+		
+		<footer>
+			<div class="footer-content">
+				<h3>Get in touch with us</h3>
+				<ul class="social-links">
+					<li><a href="#"><image src="../Student-Hub/Images/facebook.png" alt="Facebook logo"></a></li>
+					<li><a href="#"><image src="../Student-Hub/Images/instagram.png" alt="Instagram log"></a></li>
+					<li><a href="#"><image src="../Student-Hub/Images/phone.png" alt="Phone logo"><a href="tel: 0123456789"></a></li>
+				</ul>
+				<p> 
+					123 West Ave, Coffee Beans, PO 456 <br/>
+					<span><image class="logo" src="../Student-Hub/Images/copyright.png" alt="CopyRight">2023 JavaCoffee
+					| All rights reserved</span>
+				</p>
+			</div>
+		</footer>
+		<script> 
+			const signOutBtn = document.getElementById('signOut-btn');
+			signOutBtn.addEventListener('click', function(){
+				window.location.href = 'login.html';
+			}) 
+			</script>
+	</body>
+<html>

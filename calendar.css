@@ -1,0 +1,131 @@
+/* Styling for the main container holding the calendar */
+#calendar-container {
+    margin: 10px;
+    display: inline-block;
+    height: 400px; /* Set the height to the viewport height */
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid black;
+    min-width: 450px;
+}
+
+
+/* Styling for the calendar container */
+.calendar {
+    float: left;
+    width: 450px;
+    border-radius: 10px;
+    padding: 0 10px 40px;
+}
+#eventsBtn{
+    float: right;
+}
+
+#events_reminder{
+    float: right;
+    background-color: #FAF9F6;
+    width: 300px;
+    height: 100%;
+    display: none; /* Initially hidden */
+}
+
+#events_reminder.active {
+    display: block;
+
+}
+
+
+/* Styling for the header section within the container */
+.calendar header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px;
+    padding: 25px 30px 10px; /* Padding for header content */
+}
+
+/* Styling for elements inside the header (current date and switch dates) */
+header #current-date, #switchDates {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Styling for the switch dates buttons */
+#switchDates span {
+    width: 40px;
+    height: 40px;
+    margin: 0 10px; /* Margin between switch date buttons */
+    cursor: pointer;
+    text-align: center;
+    background-color: #FAF9F6;
+    border-radius: 50%;
+    padding: 10px;
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Styling for the calendar body */
+#calendar-body ul {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+/* Styling for list items in the calendar body */
+#calendar-body ul li {
+    width: calc(100% / 7); /* Distribute list items evenly in a row */
+    position: relative;
+}
+
+/* Styling for list items in the "weeks" section of the calendar */
+#calendar-body .weeks li {
+    font-weight: 500;
+}
+
+/* Styling for list items in the "days" section of the calendar */
+#calendar-body .days li {
+    z-index: 1;
+    font-weight: 500;
+    margin-top: 20px; /* Margin between day list items */
+}
+
+/* Styling for inactive (greyed out) days in the calendar */
+.days li.inactive {
+    color: grey;
+}
+
+/* Styling for active days in the calendar */
+.days li.active::before {
+    background-color: #FAF9F6; /* Background color for active days */
+}
+
+/* Styling for the circular background of each day */
+#calendar-body .days li::before {
+    position: absolute;
+    content: '';
+    height: 40px;
+    width: 40px;
+    top: 50%;
+    left: 50%;
+    z-index: -1;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Styling for the circular background of days on hover */
+.days li:hover::before {
+    background-color: white; /* Background color for hovered days */
+}
+
+.days li.current-day::before{
+    background-color: #F5A623; /* Customize the background color as needed */
+}
+
+/* Styling for events tab */
+#events_Reminders{
+    float: left;
+    width: 200px;
+    border: 2px solid black;
+    background-color: #F5A623;
+}
+

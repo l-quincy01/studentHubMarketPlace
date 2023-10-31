@@ -1,0 +1,260 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+	  font-family: Arial, Helvetica, sans-serif;
+    
+  }
+
+body{
+  background-color: #FAF9F6;
+}
+  
+/* Base styles for the logo */
+.logo {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  font-family: papyrus, sans-serif, helvetica;
+  float: left;
+  margin: auto 10px;
+}
+
+/* Base styles for the navigation bar */
+nav {
+  position: sticky;
+  top: 0;
+  display: inline-block; /* Use flexbox for layout */
+  justify-content: space-between; /* Distribute content evenly */
+  align-items: center; /* Center vertically */
+  background-color: #9966cc; /*amethyst*/
+  text-transform: uppercase;
+  padding: 0 20px; /* Add padding to create space around content */
+  height: 100px;
+  width: 100%;
+  z-index: 999;
+}
+
+#nav-links{
+  float: right;
+  margin: 20px auto;
+}
+
+/* Base styles for the navigation links */
+#nav-bar {
+  list-style: none;
+  display: inline-block;
+  margin-right: 20px; /* Add spacing between links and signout button */
+}
+
+#nav-bar li {
+  float: left;
+  margin: 20px auto;
+}
+
+#nav-bar a {
+  text-decoration: none;
+  color: black;
+  font-weight: 500;
+  padding: 10px;
+  transition: all 0.5s ease;
+}
+
+/* Styles for visited links */
+#nav-bar a:visited {
+  color: black; /* Optionally, set the text color */
+  text-decoration: underline;
+  font-weight: 500; /* Optionally, set the font weight */
+  padding: 10px; /* Optionally, set padding */
+  transition: all 0.5s ease; /* Optionally, add a transition effect */
+}
+
+
+#nav-bar a:hover {
+  transform: translateY(-10px);
+  background-color: #FAF9F6;
+  border-radius: 5px;
+}
+ 
+/* Styles for the signout button */
+#signOut-btn {
+  border: 1px solid lavender;
+  border-radius: 10px;
+  cursor: pointer;
+  padding: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: all 0.5s ease;
+  margin-top: 10px;
+  float: right;
+}
+
+#signOut-btn:hover {
+  transform: translateY(-10px);
+  box-shadow: 5px 5px lightgray;
+}
+
+/* Styles for the dropdown menu button */
+#dropDownMenu {
+  display: none; /* Initially hide the dropdown menu */
+  float: right;
+  position: relative;
+  z-index:100;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  width: 240px;
+}
+
+#dropDownBtn {
+  font-size: 24px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  float: right;
+}
+/* darkMode theme */
+nav.theme2, footer.theme2{
+  color: white;
+  background-color:#0d0a0f;
+}
+
+#nav-bar.theme2 li, a {
+  color: white;
+}
+#nav-bar.theme2 a:hover {
+  color: black;
+}
+
+#right-sidebar.theme2, #left-sidebar.theme2{
+  background-color: #281f2e;
+}
+
+.footer-content.theme2{
+  color:white;
+}
+/* Add new styles for the mobileNav menu */
+#mobileNav {
+  display: none; /* Initially hide the mobileNav menu */
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  right: 0px;
+  background-color: lavender;
+  z-index: 100;
+  width: 100%;
+  text-align: left;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+  
+  #mobileNav li {
+    padding: 10px;
+	
+  }
+
+  #mobileNav a {
+    text-decoration: none; /* Remove underlines from links */
+    color: black; /* Set text color to black */
+}
+  
+  /* Add styles to show mobileNav when needed */
+  #dropDownMenu.active #mobileNav {
+    display: block;
+  }
+  
+  /* Media query for screens with a maximum width of 1120px */
+  @media screen and (max-width: 1120px) {
+    /* Hide the desktop navigation links */
+    #nav-links {
+      display: none;
+    }
+
+    /* Show the dropdown menu button */
+    #dropDownMenu {
+      display: inline-block;
+    }
+
+    /* Style the "Signout" button within the mobileNav */
+    #mobileNav #signOut-btn {
+      display: block; /* Display "Signout" button as a block element */
+      margin-top: 10px; /* Add margin to separate it from the links */
+    }
+}
+
+/*footer styling*/
+footer{
+	background-color: #9966cc;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+  max-height: 100vh;
+  position: relative;
+}
+
+.footer-content{
+	width: 100%;
+	min-height: 20vh;
+	color: black;
+	padding: 20px;
+}
+
+.footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.footer-content .social-links{
+	display: flex;
+	justify-content: space-between;
+}
+
+.social-links li{
+	margin: 0 10px;
+	list-style: none;
+}
+
+.footer-content h3{
+	font-size: 1.8rem;
+	font-weight: 400;
+	text-transform: capitalize;
+	
+}
+
+.footer-content p{
+	display: inherit;
+	align-items: inherit;
+	justify-content: inherit;
+	flex-direction: inherit;
+	width: 75%;
+	margin-top: 25px;
+	padding-top: 10px;
+	border-top: 2px solid black;
+
+}
+
+.contact_me {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+  font-size: 18px;
+}
+
+.contact_me a {
+  text-decoration: none;
+  font-size: 22px;
+  color: black;
+}
+
+.contact_me:hover,  a:hover {
+  opacity: 0.7;
+}

@@ -1,0 +1,71 @@
+*{
+    margin: 0px;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body {
+    display: inline-block;
+    width: 100%;
+    min-height: 100vh;
+    background-color: lavender;
+}
+#loader, #message{
+    width: 220px;
+    height: 80px;
+    background-color: transparent;
+    display: block;
+    position: relative;
+    
+}
+
+#loader{
+    text-align: center;
+    margin: 0px auto;
+}
+#message{
+    margin: 40vh auto 0px;
+}
+#bounce1, 
+#bounce2, 
+#bounce3, 
+#bounce4, 
+#bounce5 {
+    float: left;
+    margin-right: 30px;
+    background-color: #FAF9F6;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+#bounce1.animate{
+    animation: bounce 0.5s infinite ease-in-out 0.2s; /* Add a delay of 0.2s for bounce1 */
+}
+
+#bounce2.animate{
+    animation: bounce 0.5s infinite ease-in-out 0.4s; /* Add a delay of 0.4s for bounce2 */
+}
+
+#bounce3.animate{
+    animation: bounce 0.5s infinite ease-in-out 0.6s; /* Add a delay of 0.6s for bounce3 */
+}
+
+#bounce4.animate{
+    animation: bounce 0.5s infinite ease-in-out 0.8s; /* Add a delay of 0.8s for bounce4 */
+}
+
+#bounce5.animate{
+    animation: bounce 0.5s infinite ease-in-out 1s; /* Add a delay of 1s for bounce5 */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}

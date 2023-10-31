@@ -1,0 +1,200 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(253, 253, 253);
+    padding-left: 0px;
+    
+}
+
+
+.banner{
+    grid-row: banner;
+    grid-column-start: 1;
+    grid-column-end: 7;
+
+    width: 100%;
+    
+    color: aliceblue;   
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgba(195, 168, 206, 0.973);
+    border-radius: 20px;
+
+}
+.banner h3{
+    padding-left: 5%;
+}
+.banner p{
+    padding-left: 6%;
+}
+.banner button{
+    float: right;
+    margin-right: 10px;
+    margin-left: 10%;
+    margin-top: 1%;
+
+    height: 70%;
+    width: 10%;
+
+    background-color: rgba(234, 237, 240, 0.808);
+    border-radius: 20px;
+    border-style: hidden;
+}
+
+
+
+.graph1-cont{
+    grid-area: graph1;
+    margin-top: 1%;
+    height: 90%;
+}
+.graph1-cont canvas{
+    margin-left: 1%;
+    border-style: groove;
+    border-radius: 20px;
+}
+
+
+.rank{
+    grid-area: rank;
+
+    border-radius: 2%;
+    background-image: linear-gradient(rgb(45, 31, 48), rgb(35, 12, 56), rgb(34, 6, 136));
+
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 200%;
+    
+    /* border-style: groove; */
+}
+
+.rank h3{
+    
+    color: rgb(226, 222, 238);
+}
+.rank p{
+    
+    bottom: 0;
+    color: rgb(226, 222, 238);
+}
+
+
+.progress{
+    grid-area: prog;
+
+    margin-top: 5%;
+}
+.progress canvas{
+    transform: rotate(90deg);
+    width: 10%;
+}
+
+.main-dash{
+    display: grid;
+    grid-template-areas: 'banner banner banner banner banner banner'
+                         'graph1 graph1 graph1 rank rank rank'
+                         'prog prog prog prog prog prog ';
+
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgb(255, 255, 255);
+   
+    background-position: center;
+    background-repeat: no-repeat;
+
+    animation-name: slideshow;
+    animation-direction: alternate-reverse;
+    animation-duration: 60s;
+    animation-iteration-count: infinite;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Extra stuff to del */
+
+#stage1{
+    position: relative;
+    margin-top: 10%;
+    margin-left: 10%;
+    margin-right: 10%;
+    height: 20em;
+    align-items: center;
+    text-align: center;
+
+    background-color: rgb(145, 140, 140);
+    align-content: center;
+    
+}
+#graph1{
+    width: 90%;
+    height: 90%;
+
+    bottom: 0px;
+}
+
+#stage2{
+    position: relative;
+    background-color: rgb(197, 197, 27);
+    width: 50%;
+}
+#stage3{
+    
+    background-color: beige;
+    margin-left: 0.5%;
+    margin-left: 10%;
+    width: 20em;
+}
+
+
+
+
+.main-dash img{
+    position: absolute;
+    width: 100px;
+    height: 300px;
+
+}
+
+.main-dash .slide1, .slide2, .slide3{
+    object-fit: cover;
+}
+#tracker-container{
+    position: relative;
+    background-color: rgb(216, 154, 129);
+    height: 50%;
+    text-align: center;
+
+}
+
+#progress-container{
+    position: relative;
+    margin-top: 3%;
+    background-color: rgb(226, 216, 157);
+    height: 100px;
+}
+
+.nav-bar{
+    position: relative;
+    background-color: rgba(216, 226, 226, 0.795);
+    margin: 0%;
+    width: 100%;
+    height: 40%;
+}
